@@ -7,8 +7,6 @@ import ReactApexChart from 'react-apexcharts';
 const Static = () => {
     const [lcdata, setLcdata] = useState([])
     const data = useLoaderData([])
-    console.log(data)
-    console.log(data.length)
 
     useEffect(() => {
         if (data.length) {
@@ -19,10 +17,6 @@ const Static = () => {
     }, [data])
 
     const donations = parseFloat(data.length * lcdata.length / 100)
-    console.log(donations)
-    console.log(lcdata.length)
-
-
 
     const seriesData = [donations, data.length, lcdata.length];
     const options = {
